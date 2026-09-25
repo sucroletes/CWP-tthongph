@@ -3,7 +3,10 @@ def is_valid_pos(size, r, c):
     return 0 <= r < size and 0 <= c < size
 
 def checkmate(board_str):
-    
+    if isinstance(board_str,str) is False:
+        print("Error")
+        return
+        
     rows = [row for row in board_str.strip().split('\n') if row]
     if not rows:
         return
@@ -34,7 +37,7 @@ def checkmate(board_str):
         r, c = kr + dr, kc + dc
         while is_valid_pos(board_size, r, c):
             piece = rows[r][c]
-            if piece != '.':
+            if piece in 'BQRKP':
                 is_diagonal = i >= 4
                 if is_diagonal:
                     if piece in 'BQ':

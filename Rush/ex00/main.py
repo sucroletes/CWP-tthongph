@@ -62,11 +62,7 @@ R...
 
     # ตัวอย่างที่ 7: กระดานที่ไม่ใช่สี่เหลี่ยมจัตุรัส
     print("\n--- Test Case 7 (Undefined: Not Square) ---")
-    board7 = """\
-R..
-.K.
-..P.
-...."""
+    board7 = 12
     checkmate(board7)
 
 
